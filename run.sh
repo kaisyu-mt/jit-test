@@ -9,9 +9,7 @@ echo "--- Default Interpreter ---"
 time -p bin/bf < tests/mandelbrot.bf
 
 echo "--- Optimized Interpreter ---"
-time -p bin/bf-opt < tests/mandelbrot.bf > mandelbrot
+time -p bin/bf-opt < tests/mandelbrot.bf > /dev/null
 
 echo "--- JIT Compilation ---"
-time -p bin/bf-jit < tests/mandelbrot.bf > mandelbrot
-
-rm mandelbrot
+time -p bin/bf-jit < tests/mandelbrot.bf > /dev/null
